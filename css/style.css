@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff--primary: 'Poppings', sans-serif;
+  --tt-color: #303030;
+
+  --hue: 194;
+  --primary--color: hsl(var(--hue), 100%, 63%);
+
+  --white: rgb(240, 255, 255);
+  --white--100: #eee;
+  --white--200: #ddd;
+  --red: #ff0000;
+  --shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+  --border: 1px solid var(--white);
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--tt-color);
+  background-color: var(--white);
+}
+
+body * {
+  font-family: var(--ff--primary);
+  color: var(--tt-color)
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  padding: 2rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  height: 3.2rem;
+  border: var(--border);
+  border-radius: .4rem 0 0 .4rem;
+  padding: 0 .8rem;
+}
+
+.search button {
+  background-color: var(--primary--color);
+  border-radius: 0 .4rem .4rem 0;
+  border: none;
+  height: 3.2rem;
+  padding: 0 1rem;
+
+  cursor: pointer;
+}
+
+.search button:focus {
+  border: .2rem solid black;
+}
+
+.search button:hover {
+  filter: brightness(1.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  box-shadow: var(--shadow);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--tt-color);
+}
+
+table th {
+  background: var(--primary--color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(even) {
+  background: var(--white);
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--white--200);
+}
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+td.user a {
+  all: unset;
+  cursor: pointer;
+}
+
+td.user a p {
+  font-weight: bold;
+}
