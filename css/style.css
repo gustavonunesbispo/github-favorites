@@ -153,3 +153,9 @@ td.user a {
 td.user a p {
   font-weight: bold;
 }
+
+.remove {
+  all: unset;
+  cursor: pointer;
+  color: var(--red);
+}
